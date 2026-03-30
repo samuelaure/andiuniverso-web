@@ -12,6 +12,7 @@ const AstrologiaHub = lazy(() => import('./pages/AstrologiaHubPage'));
 const HDHub = lazy(() => import('./pages/HumanDesignHubPage'));
 const FamiliaHub = lazy(() => import('./pages/FamiliaHubPage'));
 const BioHub = lazy(() => import('./pages/BioHubPage'));
+const AgendarPage = lazy(() => import('./pages/AgendarPage'));
 
 const PageLoader = () => (
   <div
@@ -58,6 +59,7 @@ function App() {
               <Route path="/human-design/sesion" element={<HDSesionPage />} />
               <Route path="/familia" element={<FamiliaHub />} />
               <Route path="/bio" element={<BioHub />} />
+              <Route path="/agenda" element={<AgendarPage />} />
             </Routes>
           </Suspense>
           <Footer />
