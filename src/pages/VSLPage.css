@@ -1,0 +1,133 @@
+.vsl-page {
+    background-color: #f6f5f0; /* Consistent with reference */
+    color: #4c2b08;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 60px;
+}
+
+.vsl-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header */
+.vsl-hero-header {
+    margin-bottom: 40px;
+}
+
+.vsl-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #5d2b38;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.vsl-title .highlight-text {
+    color: #d7ac5c; /* Golden/Antique gold */
+    text-decoration: underline;
+}
+
+.vsl-subtitle {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    color: #666;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Video Wrapper */
+.vsl-video-wrapper {
+    max-width: 850px;
+    margin: 0 auto 50px auto;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* CTA */
+.vsl-cta-container {
+    margin: 50px 0;
+}
+
+.vsl-cta-button {
+    display: inline-block;
+    background: linear-gradient(180deg, #852941 0%, #5d2b38 100%);
+    color: #fff;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: 800;
+    padding: 20px 60px;
+    border-radius: 60px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 25px rgba(93, 43, 56, 0.4);
+}
+
+.vsl-cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(93, 43, 56, 0.6);
+}
+
+/* Testimonials */
+.vsl-testimonials {
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+.vsl-testimonials-title {
+    font-size: 2.5rem;
+    color: #5d2b38;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+.vsl-testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    align-items: start;
+}
+
+.vsl-testimonial-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vsl-client-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #5d2b38;
+    margin-bottom: 15px;
+}
+
+.vsl-screenshot-wrapper {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.vsl-screenshot-wrapper:hover {
+    transform: translateY(-5px);
+}
+
+.vsl-screenshot {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .vsl-container {
+        padding: 15px;
+    }
+    .vsl-testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}
