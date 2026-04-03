@@ -1,9 +1,20 @@
 import { useState, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useBooking } from '../hooks/useBooking';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const { openBooking } = useBooking();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogoClick = () => {
+    if (location.pathname === '/' || location.pathname === '/index.html') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate('/');
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,15 +27,23 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
-        <div className="logo">
+        <div className="logo" onClick={handleLogoClick}>
           <span className="logo-text">
             Andi<span className="text-accent">Universo</span>
           </span>
         </div>
         <div className="nav-links">
-          <a href="#servicios">Sesiones</a>
           <a href="#sobre-mi">Sobre Mí</a>
-          <a href="#faq">Preguntas</a>
+          <div className="nav-item-dropdown">
+            <a href="#servicios" className="dropdown-trigger">Sesiones</a>
+            <div className="dropdown-menu">
+              <a href="/pergaminos">Pergaminos familiares</a>
+              <a href="/astrologia/sesion">Astrología</a>
+              <a href="/human-design/sesion">Diseño Humano</a>
+            </div>
+          </div>
+          <a href="/vsl">Para MAMÁS</a>
+          <a href="#faq">Preguntas frecuentes</a>
           <button onClick={openBooking} className="btn btn-primary nav-cta">
             Reservar
           </button>
@@ -55,9 +74,13 @@ const Navbar = () => {
           align-items: center;
         }
 
+        .logo {
+          cursor: pointer;
+        }
+
         .logo-text {
           font-family: var(--font-header);
-          font-size: 1.5rem;
+          font-size: 2rem;
           font-weight: 700;
           color: var(--primary-color);
         }
@@ -93,12 +116,59 @@ const Navbar = () => {
           width: 100%;
         }
 
+        /* Dropdown Styles */
+        .nav-item-dropdown {
+          position: relative;
+          display: flex;
+          align-items: center;
+        }
+
+        .dropdown-menu {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background: var(--white);
+          min-width: 200px;
+          border-radius: 12px;
+          padding: 10px 0;
+          box-shadow: 0 10px 30px rgba(76, 43, 8, 0.1);
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(10px);
+          transition: all 0.3s ease;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .nav-item-dropdown:hover .dropdown-menu {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+          padding: 12px 20px;
+          font-size: 0.95rem;
+          color: var(--text-color) !important;
+          transition: background 0.2s ease;
+        }
+
+        .dropdown-menu a::after {
+          display: none;
+        }
+
+        .dropdown-menu a:hover {
+          background: var(--cream-pink);
+          color: var(--primary-color) !important;
+        }
+
         .nav-cta {
           padding: 8px 20px;
           font-size: 0.9rem;
         }
 
         @media (max-width: 768px) {
+          .nav-item-dropdown,
           .nav-links a:not(.btn) {
             display: none;
           }
@@ -107,7 +177,7 @@ const Navbar = () => {
             font-size: 0.85rem;
           }
           .logo-text {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
           }
         }
       `}</style>
