@@ -34,9 +34,17 @@ We believe that astrology is a powerful tool for self-discovery and conscious pa
 
 ## 📋 Project Structure
 
-- `src/components`: Reusable UI components.
-- `src/styles`: Design system and global styles.
+- `src/components`: Reusable UI components (ScrollToTop, Navbar, Footer, BookingModal).
+- `src/pages`: Main application routes and specialized landing pages (VSLPage, PergaminosPage).
+- `src/styles`: Design system, variables, and global layout styles.
 - `src/assets`: Images and branding assets.
+
+## 📱 Features
+
+- **High-Fidelity VSL**: A dedicated professional Video Sales Letter page for mothers.
+- **Specialized Hubs**: Personalized entry points for Astrology, Human Design, and Family services.
+- **Global Layout System**: Centralized navigation and booking experience.
+- **Adaptive UX**: Responsive design optimized for high-conversion visitor journeys.
 
 ## ✒️ Author
 
