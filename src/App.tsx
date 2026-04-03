@@ -15,7 +15,6 @@ const HDHub = lazy(() => import('./pages/HumanDesignHubPage'));
 const FamiliaHub = lazy(() => import('./pages/FamiliaHubPage'));
 const BioHub = lazy(() => import('./pages/BioHubPage'));
 const AgendarPage = lazy(() => import('./pages/AgendarPage'));
-const PrankPage = lazy(() => import('./pages/PrankPage'));
 const VSLPage = lazy(() => import('./pages/VSLPage'));
 
 const PageLoader = () => (
@@ -53,7 +52,7 @@ function AppContent() {
   const location = useLocation();
   
   // Routes that should NOT have the global Navbar/Footer/Modal
-  const hubRoutes = ['/new', '/bio', '/astrologia', '/human-design', '/familia', '/vsl'];
+  const hubRoutes = ['/bio', '/astrologia', '/human-design', '/familia', '/vsl'];
   const isMinimalPage = hubRoutes.includes(location.pathname);
 
   return (
@@ -70,7 +69,6 @@ function AppContent() {
           <Route path="/familia" element={<FamiliaHub />} />
           <Route path="/bio" element={<BioHub />} />
           <Route path="/agenda" element={<AgendarPage />} />
-          <Route path="/new" element={<PrankPage />} />
           <Route path="/vsl" element={<VSLPage />} />
         </Routes>
       </Suspense>
