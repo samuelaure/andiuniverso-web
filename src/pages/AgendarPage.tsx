@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Navbar from '../components/Navbar';
 import AnimatedSection from '../components/AnimatedSection';
 import { Calendar, CheckCircle2, Sparkles } from 'lucide-react';
 
@@ -10,7 +9,6 @@ const AgendarPage: React.FC = () => {
 
   return (
     <div className="seguimiento-page">
-      <Navbar />
       <main>
         <section className="seguimiento-hero">
           <div className="container">

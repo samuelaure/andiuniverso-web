@@ -1,4 +1,3 @@
-import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Pricing from '../components/Pricing';
 import AboutAndiUniverso from '../components/AboutAndiUniverso';
@@ -10,7 +9,6 @@ import AnimatedSection from '../components/AnimatedSection';
 const HomePage = () => {
   return (
     <>
-      <Navbar />
       <main>
         <Hero />
 
@@ -29,7 +27,7 @@ const HomePage = () => {
         </div>
 
         <AnimatedSection>
-          <div className="section-xxl">
+          <div id="servicios" className="section-xxl">
             <div className="container" style={{ textAlign: 'center', marginBottom: 'var(--space-lg)' }}>
               <h2 className="heading-md">Herramientas al servicio de tu proceso</h2>
               <p className="text-muted" style={{ maxWidth: '650px', margin: '0 auto', fontSize: '1.25rem' }}>
