@@ -18,6 +18,8 @@ const AgendarPage = lazy(() => import('./pages/AgendarPage'));
 const VSLPage = lazy(() => import('./pages/VSLPage'));
 const MaternidadCursoPage = lazy(() => import('./pages/MaternidadCursoPage'));
 const MaternidadGraciasPage = lazy(() => import('./pages/MaternidadGraciasPage'));
+const HDMaternidadCursoPage = lazy(() => import('./pages/HDMaternidadCursoPage'));
+const HDMaternidadGraciasPage = lazy(() => import('./pages/HDMaternidadGraciasPage'));
 
 const PageLoader = () => (
   <div
@@ -74,6 +76,8 @@ function AppContent() {
           <Route path="/vsl" element={<VSLPage />} />
           <Route path="/astrologia/maternidad" element={<MaternidadCursoPage />} />
           <Route path="/astrologia/maternidad/gracias" element={<MaternidadGraciasPage />} />
+          <Route path="/human-design/maternidad" element={<HDMaternidadCursoPage />} />
+          <Route path="/human-design/maternidad/gracias" element={<HDMaternidadGraciasPage />} />
         </Routes>
       </Suspense>
       {!isMinimalPage && <Footer />}

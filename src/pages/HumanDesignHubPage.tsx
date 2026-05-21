@@ -1,9 +1,16 @@
 import React from 'react';
 import HubLayout from '../components/HubLayout';
-import { UserCheck, ScrollText, Star } from 'lucide-react';
+import { UserCheck, ScrollText, Star, Baby } from 'lucide-react';
 
 const HumanDesignHubPage: React.FC = () => {
     const links = [
+        {
+            title: 'Diseño Humano para Maternidad y Crianza',
+            description: 'Deja de luchar contra quien es tu hijo. Video curso · €15',
+            url: '/human-design/maternidad',
+            icon: Baby,
+            color: '#a0522d',
+        },
         {
             title: 'Sesión de Diseño Humano',
             description: 'Tu manual de usuario único para vivir con menos resistencia y más paz.',
