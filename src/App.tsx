@@ -16,6 +16,8 @@ const FamiliaHub = lazy(() => import('./pages/FamiliaHubPage'));
 const BioHub = lazy(() => import('./pages/BioHubPage'));
 const AgendarPage = lazy(() => import('./pages/AgendarPage'));
 const VSLPage = lazy(() => import('./pages/VSLPage'));
+const MaternidadCursoPage = lazy(() => import('./pages/MaternidadCursoPage'));
+const MaternidadGraciasPage = lazy(() => import('./pages/MaternidadGraciasPage'));
 
 const PageLoader = () => (
   <div
@@ -70,6 +72,8 @@ function AppContent() {
           <Route path="/bio" element={<BioHub />} />
           <Route path="/agenda" element={<AgendarPage />} />
           <Route path="/vsl" element={<VSLPage />} />
+          <Route path="/astrologia/maternidad" element={<MaternidadCursoPage />} />
+          <Route path="/astrologia/maternidad/gracias" element={<MaternidadGraciasPage />} />
         </Routes>
       </Suspense>
       {!isMinimalPage && <Footer />}

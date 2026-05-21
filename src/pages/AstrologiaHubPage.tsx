@@ -1,9 +1,16 @@
 import React from 'react';
 import HubLayout from '../components/HubLayout';
-import { Star, ScrollText, UserCheck } from 'lucide-react';
+import { Star, ScrollText, UserCheck, Baby } from 'lucide-react';
 
 const AstrologiaHubPage: React.FC = () => {
     const links = [
+        {
+            title: 'Astrología para Maternidad y Crianza',
+            description: 'Lee la carta de tu hijo y deja de adivinar. Video curso · €15',
+            url: '/astrologia/maternidad',
+            icon: Baby,
+            color: '#a0522d',
+        },
         {
             title: 'Sesión de Astrología',
             description: 'Tu carta astral como brújula para entender tu energía y procesos.',
