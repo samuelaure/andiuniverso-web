@@ -20,6 +20,7 @@ const MaternidadCursoPage = lazy(() => import('./pages/MaternidadCursoPage'));
 const MaternidadGraciasPage = lazy(() => import('./pages/MaternidadGraciasPage'));
 const HDMaternidadCursoPage = lazy(() => import('./pages/HDMaternidadCursoPage'));
 const HDMaternidadGraciasPage = lazy(() => import('./pages/HDMaternidadGraciasPage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 const PageLoader = () => (
   <div
@@ -78,6 +79,7 @@ function AppContent() {
           <Route path="/astrologia/maternidad/gracias" element={<MaternidadGraciasPage />} />
           <Route path="/human-design/maternidad" element={<HDMaternidadCursoPage />} />
           <Route path="/human-design/maternidad/gracias" element={<HDMaternidadGraciasPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
       {!isMinimalPage && <Footer />}

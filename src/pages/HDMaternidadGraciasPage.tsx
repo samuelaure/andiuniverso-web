@@ -127,7 +127,7 @@ const s: Record<string, React.CSSProperties> = {
     fontFamily: "'Inter', sans-serif",
     position: 'relative',
     overflow: 'hidden',
-    paddingTop: '60px',
+    paddingTop: '120px',
     paddingBottom: '80px',
   },
   bg: {
